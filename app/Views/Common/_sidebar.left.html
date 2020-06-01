@@ -1,0 +1,71 @@
+<div class="page-sidebar-wrapper">
+    <script>
+        var menuState = false;
+        function toggleMenu(element) {
+            if (!menuState) {
+                $(element).toggleClass('nav-item open');
+                $(element).find(".arrow").toggleClass('open');
+                $(element).find(".sub-menu").css({ 'display': 'block' });
+                menuState = true;
+            } else {
+                menuState = false;
+                $(element).toggleClass('nav-item open');
+                $(element).find(".arrow").toggleClass('open');
+                $(element).find(".sub-menu").css({ 'display': 'none' });
+            }
+        }
+    </script>
+        <div class="page-sidebar navbar-collapse collapse">
+            <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-item start fixed" ui-sref-active="active" value="fixed">
+                    <a ui-sref="base.dashboard" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" onclick="toggleMenu(this)" ui-sref-active="active">
+                    <a ui-sref="base.cityDetails" class="nav-link nav-toggle">
+                        <i class="fa fa-map-marker"></i>
+                        <span class="title">Manage City</span>
+                    </a>
+                </li>
+                <li class="nav-item" onclick="toggleMenu(this)" ui-sref-active="active">
+                    <a ui-sref="base.bankDetails" class="nav-link nav-toggle">
+                        <i class="fa fa-university"></i>
+                        <span class="title">Manage Bank</span>
+                    </a>
+                </li>
+                <li class="nav-item" onclick="toggleMenu(this)" ui-sref-active="active">
+                    <a ui-sref="base.auctionproperty" class="nav-link nav-toggle">
+                        <i class="fa fa-area-chart"></i>
+                        <span class="title">Manage Property </span>
+                    </a>
+                </li>
+        
+                <li class="nav-item" onclick="toggleMenu(this)" ui-sref-active="active">
+                    <a ui-sref="base.user" class="nav-link nav-toggle">
+                        <i class="fa fa-user"></i>
+                        <span class="title">Manage User</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                        <a ui-sref="base.changePassword" class="nav-link nav-toggle" ui-sref-active="active">
+                            <i class="fa fa-key"></i>
+                            <span class="title">Change Password</span>
+                        </a>
+                    </li>
+          
+                <li class="nav-item start " ui-sref-active="active">
+                    <a ui-sref="auth.login" class="nav-link nav-toggle" ng-click="$localStorage.user = null">
+                        <i class="fa fa-power-off"></i>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>

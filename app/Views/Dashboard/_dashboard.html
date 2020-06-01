@@ -1,0 +1,52 @@
+ <!-- BEGIN CONTENT BODY -->
+<div class="page-content" style="background-color:white">
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title">
+        Dashboard
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN DASHBOARD STATS 1-->
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a ui-sref="base.media" class="dashboard-stat dashboard-stat-v2 blue">
+                <div class="visual">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup">{{dashboard.totalBank}}</span>
+                    </div>
+                    <div class="desc"> Total Banks </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a ui-sref="base.inward" class="dashboard-stat dashboard-stat-v2 red">
+                <div class="visual">
+                    <i class="fa fa-truck"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup">{{dashboard.totalAuctionItem}}</span>
+                    </div>
+                    <div class="desc"> Total Items </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a ui-sref="base.sale" class="dashboard-stat dashboard-stat-v2 green">
+                <div class="visual">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup">{{dashboard.totalCities}}</span>
+                    </div>
+                    <div class="desc"> Total Cities</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

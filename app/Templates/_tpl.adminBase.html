@@ -1,0 +1,25 @@
+<div class="page-wrapper">
+
+    <!-- Main Header -->
+    <header>
+		<div ui-view="header"></div>
+	</header>
+	  
+    <!-- Left side column. contains the logo and sidebar -->
+	<div class="page-container">
+		<aside class="main-sidebar">
+			<div ui-view="sidebar"></div>
+		</aside>
+
+		<!-- Content Wrapper. Contains page content -->		
+		<div class="page-content-wrapper">
+			<div ui-view="body"></div>
+		</div>
+	</div>
+	<!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="page-footer">
+    	<div ui-view="footer"></div>
+	</footer>	
+</div><!-- ./wrapper -->

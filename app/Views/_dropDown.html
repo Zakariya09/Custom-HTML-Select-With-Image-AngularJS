@@ -1,0 +1,166 @@
+<style>
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: #3e8e41;
+    }
+    
+    #myInput {
+        box-sizing: border-box;
+        background-image: url('searchicon.png');
+        background-position: 14px 12px;
+        background-repeat: no-repeat;
+        font-size: 16px;
+        padding: 6px 13px 5px 21px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+    
+    #myInput:focus {
+        outline: 3px solid #ddd;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    
+    
+    .dropdown-content a {
+        color: black;
+        padding: 6px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    #countries {
+        display: none;
+    }
+    
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    #about {
+        display: none;
+    }
+    
+    .input-container {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .icon {
+        padding: 10px;
+        color: #333;
+        min-width: 50px;
+        text-align: center;
+    }
+    
+    .table-scroll {
+        position:relative;
+        max-width:600px;
+        margin:auto;
+        overflow:hidden;
+        border:1px solid #000;
+    }
+    .table-wrap {
+        width:100%;
+        overflow:auto;
+    }
+    .table-scroll table {
+        width:100%;
+        margin:auto;
+        border-collapse:separate;
+        border-spacing:0;
+    }
+    .table-scroll th, .table-scroll td {
+        padding:5px 10px;
+        border:1px solid #000;
+        background:#fff;
+        white-space:nowrap;
+        vertical-align:top;
+    }
+    .table-scroll thead, .table-scroll tfoot {
+        background:#f9f9f9;
+    }
+    .clone {
+        position:absolute;
+        top:0;
+        left:0;
+        pointer-events:none;
+    }
+    .clone th, .clone td {
+        visibility:hidden
+    }
+    .clone td, .clone th {
+        border-color:transparent
+    }
+    .clone tbody th {
+        visibility:visible;
+        color:red;
+    }
+    .clone .fixed-side {
+        border:1px solid #000;
+        background:#eee;
+        visibility:visible;
+    }
+    .clone thead, .clone tfoot{background:transparent;}
+    .btn-padd{
+        padding-left: 90px !important;
+        padding-right: 90px !important;
+    }
+    .flag{
+        width: 100%; height: 100%;
+    }
+</style>
+
+<section class="page-content text-center">
+    <div class="row">
+        <h1>Custome Selectize With Images</h1>
+    </div>
+    <br>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle btn-padd" type="button" data-toggle="dropdown">
+            {{btnName}}
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <div class="input-container">
+                        <input input type="text" class="input-field" placeholder="Search.." ng-model="searchText" id="myInput">
+                    </div>
+                </li>
+                <li>
+                    <ul style="overflow-x: hidden;overflow-y: visible; height: 190px;list-style-type: none">
+                        <li class="row" ng-repeat="data in arr | filter: searchText ">
+                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                <img ng-src="{{data.flag}}" class="flag" alt="image" onkeyup="filterFunction()" />
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <div ng-click="getData(data)" >
+                                    <span id="search" style="font-weight: bolder">{{data.name}} </span> <br>
+                                    {{data.countryCode}} &nbsp; {{data.countryID}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>

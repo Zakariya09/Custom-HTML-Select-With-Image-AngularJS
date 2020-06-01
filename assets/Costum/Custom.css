@@ -1,0 +1,11 @@
+.recordsrow p{
+    display: inline;
+}
+.reportCard{
+    padding: 8px;
+    background: white;
+    margin-right: -12px;
+}
+.m-left{
+    margin-left: -30px;
+}

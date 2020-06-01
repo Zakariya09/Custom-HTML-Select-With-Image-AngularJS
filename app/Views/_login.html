@@ -1,0 +1,37 @@
+<!-- BEGIN LOGO -->
+<div class="login" ng-init="emptyUserSession()">        
+    <div class="logo">
+        <h4 style="color:white"><b>AUCTION</b></h4>
+    </div>
+        <!-- END LOGO -->
+        <!-- BEGIN LOGIN -->
+            <form class="login-form" >
+                    <div class="content">		
+            <!-- BEGIN LOGIN FORM -->
+            <form class="login-form" novalidate>
+			<ng-form name="frmLogin" >			
+                <h3 class="form-title font-green">Sign In</h3>
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button>
+                    <span> Enter any username and password. </span>
+                </div>
+                <div class="form-group" style="margin: 10px">
+                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                    <label class="control-label visible-ie8 visible-ie9">Username</label>
+                    <input name="LoginID" ng-model="user.contactNumber" class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username"/> </div>
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+                <div class="form-group" style="margin: 10px">
+                    <label name="password" class="control-label visible-ie8 visible-ie9">Password</label>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"
+                     ng-model="user.password"/> </div>
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                <div class="form-group">
+                    <button type="button" class="btn green uppercase" 
+                    ng-click="login(user)" ng-disabled="frmLogin.$invalid" id="btnLogin">Login</button>                    
+                    <!--<a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>-->
+                </div>   
+				</ng-form>
+            </form>
+            <!-- END LOGIN FORM -->
+        </div>
+	</div>

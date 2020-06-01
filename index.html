@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Records - Portal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/pages/css/search.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/css/components-md.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="assets/global/css/plugins-md.css" rel="stylesheet" type="text/css" />
+    <link href="assets/apps/css/toaster.min.css" rel="stylesheet" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="assets/layouts/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/layouts/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="assets/layouts/layout/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="assets/pages/css/login.css" rel="stylesheet" type="text/css" />
+    <link href="assets/pages/css/profile.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link href="assets/AngularJS/modules/css/angular-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/AngularJS/modules/css/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <link href="assets/AngularJS/css/angular-tooltips.css"  rel="stylesheet" type="text/css" ></link> -->
+    <!-- BEGIN ANGULAR THIRD PARTY STYLES --->
+    <link rel="stylesheet" href="assets/AngularJS/modules/css/loading-bar.css">
+    <link rel="stylesheet" href="assets/AngularJS/modules/css/ladda-min.css">
+    <!-- BEGIN ANGULAR THIRD PARTY STYLES --->
+    <script src="assets/apps/DateAPI.js"></script>
+    <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <!-- Custum Css -->
+    <link rel="stylesheet" href="assets/Costum/Custom.css" rel="stylesheet">
+</head>
+<!-- END HEAD -->
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-md page-sidebar-closed">
+    <span ui-view=""></span>
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-extended-modals.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="assets/global/scripts/app.js" type="text/javascript"></script>
+    <script src="assets/AngularJS/modules/js/toastr.min.js"></script>
+    <script src="assets/AngularJS/modules/js/sweetalert.min.js"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <script src="assets/pages/scripts/profile.min.js" type="text/javascript"></script>
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+    <script src="assets/layouts/global/scripts/quick-sidebar.js" type="text/javascript"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <!-- BEGIN ANGULARJS SCRIPTS -->
+    <script src="assets/AngularJS/js/angular-v1.5.5.js" type="text/javascript"></script>
+    <script src="assets/AngularJS/js/angular-route.js"></script>
+    <script src="assets/AngularJS/js/angular-ui-router.js"></script>
+    <script src="assets/AngularJS/js/angular-resource.js"></script>
+    <script src="assets/AngularJS/js/angular-messages.min.js"></script>
+    <script src="assets/AngularJS/js/angular-animate.min.js"></script>
+    <script src="assets/AngularJS/js/angular-sanitize.js"></script>
+    <script src="assets/AngularJS/js/ngStorage.min.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBicHGPg_KR5UfRGOlDvL8-uKXTEmA3KI0"></script>
+    <!-- BEGIN ANGULARJS THIRD PARTY SCRIPTS -->
+    <script src="assets/AngularJS/modules/js/spin.js"></script>
+    <script src="assets/AngularJS/modules/js/ladda-min.js"></script>
+    <script src="assets/AngularJS/modules/js/ladda-angular.js"></script>
+    <script src="assets/AngularJS/modules/js/loading-bar.js"></script>
+    <script src="assets/AngularJS/modules/js/angular-datepicker.min.js"></script>
+    <!-- DEPENDANCY FOR CONVERT JSON OBJECT TO FORM DATA -->
+    <script src="assets/AngularJS/js/ui-bootstrap-tpls.js"></script>
+    <!-- <script src="assets/AngularJS/js/angular-tooltips.js"></script> -->
+    <script src="app/Services/http-auth-interceptor.js"></script>
+    <!-- END ANGULARJS THIRD PARTY SCRIPTS -->
+    <!-- BEGIN ANGULARJS THIRD PARTY SCRIPTS FOR FILE UPLOAD -->
+    <script src="assets/apps/scripts/ng-file-upload-shim.js"></script>
+    <script src="assets/apps/scripts/ng-file-upload.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- END ANGULARJS THIRD PARTY SCRIPTS FOR FILE UPLOAD-->
+    
+    <!-- BEGIN APP SCRIPTS -->
+    <script src="app/app.js"></script>
+    <!-- BEGIN APP SERVICES SCRIPTS -->
+    <script src="app/Services/commonService.js"></script>
+    <script src="app/Services/services.js"></script>
+    <script src="app/Directives/select2.js"></script>
+    <script src="app/Services/fileUploadService.js"></script>
+    <script src="assets/AngularJS/js/selectize.js"></script>
+    <script src="assets/AngularJS/js/angular-selectize.js"></script>
+    <script src="assets/AngularJS/css/selectize.css"></script>
+    <!-- END APP SERVICES SCRIPTS -->
+    <!-- BEGIN APP CONTROLLERS SCRIPTS -->
+    
+    <!-- LOGIN, DASHBOARD CONTROLLER START -->
+    <script src="app/Controllers/LoginController.js"></script>
+    <!-- <script src="app/Controllers/DashboardController.js"></script> -->
+    <!-- LOGIN, DASHBOARD CONTROLLER END -->
+    
+    <!-- BASE CONTROLLERS START -->
+    <script src="app/Controllers/Common/HeaderController.js"></script>
+    <!-- <script src="app/Controllers/Common/SideMenuBarController.js"></script> -->
+    <script src="app/Controllers/Common/FooterController.js"></script>
+    <script src="app/Controllers/dropDownController.js"></script>
+    <!-- BASE CONTROLLERS END -->
+    
+    <!-- Master controllers start-->
+    <script src="app/Controllers/Master/categoryListController.js"></script>
+    <!--Master controllers end-->
+        <!--Category controller start-->
+        <!-- <script src="app/Controllers/cityController.js"></script> -->
+        <!--Category controller end-->
+         <!--Language controller start-->
+         <!-- <script src="app/Controllers/bankController.js"></script> -->
+         <!--Language controller end-->
+        
+    <!--review Details controller start-->
+    <script src="app/Controllers/Review-Details/reviewDetailsController.js"></script>
+    <!--Change password controller end-->
+    <!--View records Controller  start -->
+    <script src="app/Controllers/Review-List/reviewListController.js"></script>
+    <!-- Manage Book Controller end -->
+    <!-- ui-grid -->
+    <link rel="stylesheet" href="assets/ui-grid4.4.6/ui-grid.min.css">
+    <script src="assets/ui-grid4.4.6/ui-grid.min.js"></script>
+    <!-- Manage Feedback Controller start -->
+    <!-- <script src="app/Controllers/userController.js"></script> -->
+    <!-- Manage Feedback Controller end -->
+
+    <!--Pagination js started-->
+    <script src="assets/dirPagination.js"></script>
+    <!--Pagination js ended-->
+
+    <!--Chart file started-->
+    <script src="assets/Chart/loader.js"></script>
+    <script src="assets/Chart/ng-google-chart.min.js"></script>
+    <!--Chart file ended-->
+
+    <!--PPT Js-->
+    <script src="assets/apps/scripts/jszip.min.js"></script>
+    <script src="assets/apps/scripts/pptxgen.js"></script>
+    <!--PPT Js End-->
+</body>
+</html>
