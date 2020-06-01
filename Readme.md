@@ -1,4 +1,4 @@
-##Installation 
+Installation 
 
 i - Clone the project and open in Visual Studio Code 
 
